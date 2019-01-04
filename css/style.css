@@ -367,3 +367,31 @@
     line-height: 27px;
     text-align: justify;
     margin-bottom: 20px; } }
+
+.advice {
+  background-color: #06799f; }
+  .advice__wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 45px 55px; }
+  .advice__text {
+    color: #ffffff;
+    font-family: "Roboto Slab", serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center; }
+
+@media (max-width: 767.98px) {
+  .advice__wrapper {
+    padding: 15px 25px; }
+  .advice__text {
+    font-size: 25px;
+    line-height: 40px; } }
+
+@media (max-width: 575.98px) {
+  .advice__wrapper {
+    padding: 15px 25px; }
+  .advice__text {
+    font-size: 20px;
+    line-height: 35px; } }
