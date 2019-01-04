@@ -1,0 +1,110 @@
+.section-three {
+    &__wrapper {
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 85px 0 35px;
+    }
+    &__header {
+        font-family: $primary-font;
+        font-size: 60px;
+        margin-top: 0;
+        margin-bottom: 45px;
+        line-height: 72px;
+    }
+    &__desc {
+        font-family: $primary-font;
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 85px;
+        font-weight: lighter;
+    }
+}
+
+.list-square {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    &__item {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 30px;
+        margin-bottom: 40px;
+        font-family: $primary-font;
+        position: relative;
+        padding-left: 70px;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #000;
+            left: 0;
+        }
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .section-three__wrapper {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .section-three__wrapper {
+        padding-top: 45px;
+        padding-bottom: 45px;
+        margin-bottom: 30px;
+    }
+    .section-three__header {
+        font-size: 45px;
+        line-height: 45px;
+    }
+    .section-three__desc {
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 45px;
+    }
+
+    .list-square {
+        padding-left: 0;
+    }
+    .list-square__item {
+        margin: 0 0 30px;
+        font-size: 15px;
+        line-height: 28px;
+    }
+    .list-square__item:before {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .section-three__wrapper {
+        padding: 15px 20px 20px;
+    }
+    .section-three__header {
+        font-size: 33px;
+        line-height: 35px;
+        margin-bottom: 35px;
+    }
+    .section-three__desc {
+        font-size: 15px;
+        line-height: 30px;
+        margin-bottom: 35px;
+        text-align: justify;
+    }
+    .list-square {
+        padding-left: 0px;
+    }
+    .list-square__item {
+        font-size: 15px;
+        margin-bottom: 10px;
+        padding-left: 35px;
+        text-align: justify;
+    }
+    .list-square__item:before {
+        top: 5px;
+    }
+}
