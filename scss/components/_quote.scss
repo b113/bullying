@@ -1,0 +1,70 @@
+.quote {
+    background-color: $primary-color;
+    &__wrapper {
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+    &__hook {
+        font-size: 186px;
+        font-family: $primary-font;
+        position: absolute;
+        top: -75px;
+        left: 0;
+    }
+    &__text {
+        color: #ffffff;
+        font-family: $primary-font;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 48px;
+        position: relative;
+        padding-left: 100px;
+    }
+    &__author {
+        display: block;
+        text-align: right;
+        color: #ffffff;
+        font-family: $primary-font;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .quote__wrapper {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .quote__text {
+        font-size: 25px;
+        line-height: 40px;
+    }
+    .quote__author {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .quote__text {
+        font-size: 20px;
+        line-height: 35px;
+        padding-left: 85px;
+    }
+    .quote__wrapper {
+        padding-left: 10px;
+        padding-right: 25px;
+    }
+    .quote__author {
+        font-size: 18px;
+    }
+    .quote__hook {
+        font-size: 150px;
+        top: -60px;
+        left: 0;
+    }
+}
