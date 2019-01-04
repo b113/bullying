@@ -15,3 +15,5 @@ npm run compile
 npm run watch
 
 If live-server doesn't work, install it globally: npm install -g live-server
+
+Thanks for the boilerplate to https://github.com/thomlom/scss-boilerplate
