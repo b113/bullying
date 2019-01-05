@@ -15,7 +15,6 @@
         font-family: $primary-font;
         font-size: 30px;
         line-height: 36px;
-        margin-bottom: 85px;
         font-weight: lighter;
     }
 }
@@ -24,11 +23,14 @@
     list-style: none;
     margin: 0;
     padding-left: 0;
+    &__inner {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
     &__item {
         font-size: 24px;
         font-weight: 400;
         line-height: 30px;
-        margin-bottom: 40px;
         font-family: $primary-font;
         position: relative;
         padding-left: 70px;
@@ -41,20 +43,30 @@
             left: 0;
         }
     }
+    &__stripe {
+        padding: 35px 10px;
+        &--background {
+            background-color: #f3f3f3;
+        }
+    }
 }
 
 @media (max-width: 1199.98px) {
-    .section-three__wrapper {
+    .section-three__wrapper,
+    .list-square__stripe {
         padding-left: 45px;
         padding-right: 45px;
     }
 }
 
 @media (max-width: 767.98px) {
-    .section-three__wrapper {
+    .section-three__wrapper,
+    .list-square__stripe {
         padding-top: 45px;
         padding-bottom: 45px;
-        margin-bottom: 30px;
+    }
+    .list-square__stripe {
+        margin-bottom: 0;
     }
     .section-three__header {
         font-size: 45px;
@@ -63,14 +75,11 @@
     .section-three__desc {
         font-size: 22px;
         line-height: 30px;
-        margin-bottom: 45px;
     }
-
     .list-square {
         padding-left: 0;
     }
     .list-square__item {
-        margin: 0 0 30px;
         font-size: 15px;
         line-height: 28px;
     }
@@ -81,8 +90,9 @@
 }
 
 @media (max-width: 575.98px) {
-    .section-three__wrapper {
-        padding: 15px 20px 20px;
+    .section-three__wrapper,
+    .list-square__stripe {
+        padding: 30px 20px 20px;
     }
     .section-three__header {
         font-size: 33px;
@@ -92,7 +102,6 @@
     .section-three__desc {
         font-size: 15px;
         line-height: 30px;
-        margin-bottom: 35px;
         text-align: justify;
     }
     .list-square {
@@ -100,7 +109,6 @@
     }
     .list-square__item {
         font-size: 15px;
-        margin-bottom: 10px;
         padding-left: 35px;
         text-align: justify;
     }

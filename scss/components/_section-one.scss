@@ -1,8 +1,9 @@
 .section-one {
+    padding-bottom: 70px;
     &__wrapper {
         max-width: 1170px;
         margin: 0 auto;
-        padding: 85px 0 70px;
+        padding: 85px 0 35px;
     }
     &__header {
         font-family: $primary-font;
@@ -15,7 +16,6 @@
         font-family: $primary-font;
         font-size: 30px;
         line-height: 36px;
-        margin-bottom: 85px;
         font-weight: lighter;
     }
     &__btn {
@@ -31,50 +31,73 @@
         font-family: $primary-font;
         font-size: 36px;
         text-align: center;
-        line-height: 69px;
+        line-height: 67px;
         box-sizing: border-box;
         &:hover {
             border: 2px solid #06799f;
             background: transparent;
             color: #000;
+            line-height: 67px;
         }
     }
 }
 
 .list {
-    list-style-type: decimal;
+    list-style-type: none;
     margin: 0;
-    padding-left: 40px;
+    padding-left: 0;
+    &__inner {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
     &__item {
         font-weight: bold;
         font-size: 38px;
-        margin-bottom: 40px;
         font-family: $primary-font;
+        margin-bottom: 40px;
     }
     &__desc {
         margin: 0 0 65px;
         font-family: $primary-font;
         font-size: 24px;
         line-height: 30px;
-        padding-left: 65px;
+        padding-left: 100px;
         &:last-child {
-            margin-bottom: 110px;
+            margin-bottom: 0px;
+        }
+    }
+    &__stripe {
+        padding: 35px 60px;
+        &--background {
+            background-color: #f3f3f3;
+        }
+        &:last-child {
+            margin-bottom: 70px;
         }
     }
 }
 
 @media (max-width: 1199.98px) {
-    .section-one__wrapper {
+    .section-one__wrapper,
+    .list__stripe {
         padding-left: 45px;
         padding-right: 45px;
     }
 }
 
 @media (max-width: 767.98px) {
-    .section-one__wrapper {
+    .section-one__wrapper,
+    .list__stripe {
         padding-top: 45px;
         padding-bottom: 45px;
         margin-bottom: 30px;
+    }
+    .section-one__wrapper {
+        margin-bottom: 0;
+        padding-bottom: 30px;
+    }
+    .list__stripe {
+        margin-bottom: 0;
     }
     .section-one__header {
         font-size: 45px;
@@ -83,7 +106,6 @@
     .section-one__desc {
         font-size: 22px;
         line-height: 30px;
-        margin-bottom: 45px;
     }
     .list__item {
         font-weight: bold;
@@ -94,18 +116,20 @@
         margin: 0 0 30px;
         font-size: 15px;
         line-height: 28px;
+        padding-left: 80px;
     }
     .section-one__btn {
         font-size: 25px;
     }
-    .list__desc:last-child {
-        margin-bottom: 55px;
-    }
 }
 
 @media (max-width: 575.98px) {
+    .section-one__wrapper,
+    .list__stripe {
+        padding: 30px 20px 20px;
+    }
     .section-one__wrapper {
-        padding: 15px 20px 20px;
+        padding-bottom: 15px;
     }
     .section-one__header {
         font-size: 33px;
@@ -115,11 +139,7 @@
     .section-one__desc {
         font-size: 15px;
         line-height: 30px;
-        margin-bottom: 35px;
         text-align: justify;
-    }
-    .list {
-        padding-left: 20px;
     }
     .list__item {
         font-size: 23px;
@@ -132,11 +152,8 @@
         text-align: justify;
         margin-bottom: 20px;
     }
-    .list__desc:last-child {
-        margin-bottom: 30px;
-    }
     .section-one__btn {
-        width: 100%;
+        width: 85%;
         font-size: 25px;
     }
 }
