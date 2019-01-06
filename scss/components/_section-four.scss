@@ -1,22 +1,19 @@
 .section-four {
     &__wrapper {
-        max-width: 1170px;
-        margin: 0 auto;
+        @extend %container;
         padding: 85px 0 35px;
     }
     &__header {
         font-family: $primary-font;
-        font-size: 60px;
         margin-top: 0;
         margin-bottom: 45px;
-        line-height: 72px;
+        @include fontDecoration(60px, 72px);
     }
     &__text {
         color: #000000;
         font-family: $primary-font;
-        font-size: 30px;
         font-weight: 300;
-        line-height: 36px;
+        @include fontDecoration(30px, 36px);
     }
     &__img {
         margin: 30px 0;
@@ -52,41 +49,41 @@
 }
 
 @media (max-width: 767.98px) {
-    .section-four__wrapper {
-        padding-top: 45px;
-        padding-bottom: 45px;
-    }
-    .section-four__header {
-        font-size: 45px;
-        line-height: 45px;
-    }
-    .section-four__text {
-        font-size: 15px;
-        line-height: 28px;
-        text-align: justify;
-    }
-    .section-four__img {
-        margin: 15px 0;
-        width: 100%;
-        height: auto;
+    .section-four {
+        &__wrapper {
+            padding-top: 45px;
+            padding-bottom: 45px;
+        }
+        &__header {
+            @include fontDecoration(45px, 45px);
+        }
+        &__text {
+            text-align: justify;
+            @include fontDecoration(15px, 28px);
+        }
+        &__img {
+            margin: 15px 0;
+            width: 100%;
+            height: auto;
+        }
     }
 }
 
 @media (max-width: 575.98px) {
-    .section-four__wrapper {
-        padding: 30px 20px 20px;
-    }
-    .section-four__header {
-        font-size: 33px;
-        line-height: 35px;
-        margin-bottom: 35px;
-    }
-    .section-four__text {
-        font-size: 15px;
-        line-height: 27px;
-        text-align: justify;
-    }
-    .section-four__img {
-        margin: 15px 0;
+    .section-four {
+        &__wrapper {
+            padding: 30px 20px 20px;
+        }
+        &__header {
+            margin-bottom: 35px;
+            @include fontDecoration(33px, 35px);
+        }
+        &__text {
+            text-align: justify;
+            @include fontDecoration(15px, 27px);
+        }
+        &__img {
+            margin: 15px 0;
+        }
     }
 }

@@ -1,36 +1,33 @@
 .advice {
     background-color: $primary-color;
     &__wrapper {
-        max-width: 1170px;
-        margin: 0 auto;
+        @extend %container;
         padding: 45px 55px;
     }
     &__text {
-        color: #ffffff;
-        font-family: $primary-font;
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 48px;
+        @extend %quoteText;
         text-align: center;
     }
 }
 
 @media (max-width: 767.98px) {
-    .advice__wrapper {
-        padding: 15px 25px;
-    }
-    .advice__text {
-        font-size: 25px;
-        line-height: 40px;
+    .advice {
+        &__wrapper {
+            padding: 15px 25px;
+        }
+        &__text {
+            @include fontDecoration(25px, 40px);
+        }
     }
 }
 
 @media (max-width: 575.98px) {
-    .advice__wrapper {
-        padding: 15px 25px;
-    }
-    .advice__text {
-        font-size: 20px;
-        line-height: 35px;
+    .advice {
+        &__wrapper {
+            padding: 15px 25px;
+        }
+        &__text {
+            @include fontDecoration(20px, 35px);
+        }
     }
 }

@@ -2,25 +2,22 @@
     background-color: $primary-color;
     height: 100vh;
     &__wrapper {
-        max-width: 1170px;
-        margin: 0 auto;
+        @extend %container;
         position: relative;
         padding-top: 55px;
     }
     &__title {
         font-family: $primary-font;
         color: #fff;
-        font-size: 92px;
         font-weight: 700;
         margin-top: 0;
-        line-height: 70px;
+        @include fontDecoration(92px, 70px);
     }
     &__desc {
         font-family: $primary-font;
         color: #fff;
-        font-size: 60px;
         font-weight: 400;
-        line-height: 72px;
+        @include fontDecoration(60px, 72px);
     }
 }
 
@@ -91,26 +88,28 @@
 }
 
 @media screen and (max-width: 775px) {
-    .header__title {
-        font-size: 65px;
-        margin-bottom: 10px;
-    }
-    .header__desc {
-        font-size: 35px;
-        line-height: 60px;
+    .header {
+        &__title {
+            font-size: 65px;
+            margin-bottom: 10px;
+        }
+        &__desc {
+            @include fontDecoration(35px, 60px);
+        }
     }
 }
 
 @media screen and (max-width: 535px) {
-    .header__title {
-        font-size: 33px;
-    }
-    .header__desc {
-        font-size: 20px;
-        line-height: 45px;
-    }
-    .header__wrapper {
-        padding-left: 20px;
-        padding-right: 20px;
+    .header {
+        &__title {
+            font-size: 33px;
+        }
+        &__desc {
+            @include fontDecoration(20px, 45px);
+        }
+        &__wrapper {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 }

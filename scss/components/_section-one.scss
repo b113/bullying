@@ -1,21 +1,18 @@
 .section-one {
     padding-bottom: 70px;
     &__wrapper {
-        max-width: 1170px;
-        margin: 0 auto;
+        @extend %container;
         padding: 85px 0 35px;
     }
     &__header {
         font-family: $primary-font;
-        font-size: 60px;
         margin-top: 0;
         margin-bottom: 45px;
-        line-height: 72px;
+        @include fontDecoration(60px, 72px);
     }
     &__desc {
         font-family: $primary-font;
-        font-size: 30px;
-        line-height: 36px;
+        @include fontDecoration(30px, 36px);
         font-weight: lighter;
     }
     &__btn {
@@ -29,10 +26,9 @@
         cursor: pointer;
         color: #fff;
         font-family: $primary-font;
-        font-size: 36px;
         text-align: center;
-        line-height: 67px;
         box-sizing: border-box;
+        @include fontDecoration(36px, 67px);
         &:hover {
             border: 2px solid #06799f;
             background: transparent;
@@ -47,8 +43,7 @@
     margin: 0;
     padding-left: 0;
     &__inner {
-        max-width: 1170px;
-        margin: 0 auto;
+        @extend %container;
     }
     &__item {
         font-weight: bold;
@@ -59,8 +54,7 @@
     &__desc {
         margin: 0 0 65px;
         font-family: $primary-font;
-        font-size: 24px;
-        line-height: 30px;
+        @include fontDecoration(24px, 30px);
         padding-left: 100px;
         &:last-child {
             margin-bottom: 0px;
@@ -92,34 +86,35 @@
         padding-bottom: 45px;
         margin-bottom: 30px;
     }
-    .section-one__wrapper {
-        margin-bottom: 0;
-        padding-bottom: 30px;
+    .section-one {
+        &__wrapper {
+            margin-bottom: 0;
+            padding-bottom: 30px;
+        }
+        &__header {
+            @include fontDecoration(45px, 45px);
+        }
+        &__desc {
+            @include fontDecoration(22px, 30px);
+        }
+        &__btn {
+            font-size: 25px;
+        }
     }
-    .list__stripe {
-        margin-bottom: 0;
-    }
-    .section-one__header {
-        font-size: 45px;
-        line-height: 45px;
-    }
-    .section-one__desc {
-        font-size: 22px;
-        line-height: 30px;
-    }
-    .list__item {
-        font-weight: bold;
-        font-size: 30px;
-        margin-bottom: 20px;
-    }
-    .list__desc {
-        margin: 0 0 30px;
-        font-size: 15px;
-        line-height: 28px;
-        padding-left: 80px;
-    }
-    .section-one__btn {
-        font-size: 25px;
+    .list {
+        &__stripe {
+            margin-bottom: 0;
+        }
+        &__item {
+            font-weight: bold;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        &__desc {
+            margin: 0 0 30px;
+            padding-left: 80px;
+            @include fontDecoration(15px, 28px);
+        }
     }
 }
 
@@ -128,32 +123,33 @@
     .list__stripe {
         padding: 30px 20px 20px;
     }
-    .section-one__wrapper {
-        padding-bottom: 15px;
+    .section-one {
+        &__wrapper {
+            padding-bottom: 15px;
+        }
+        &__header {
+            margin-bottom: 35px;
+            @include fontDecoration(33px, 35px);
+        }
+        &__desc {
+            text-align: justify;
+            @include fontDecoration(15px, 30px);
+        }
+        &__btn {
+            width: 85%;
+            font-size: 25px;
+        }
     }
-    .section-one__header {
-        font-size: 33px;
-        line-height: 35px;
-        margin-bottom: 35px;
-    }
-    .section-one__desc {
-        font-size: 15px;
-        line-height: 30px;
-        text-align: justify;
-    }
-    .list__item {
-        font-size: 23px;
-        margin-bottom: 10px;
-    }
-    .list__desc {
-        padding-left: 0;
-        font-size: 15px;
-        line-height: 27px;
-        text-align: justify;
-        margin-bottom: 20px;
-    }
-    .section-one__btn {
-        width: 85%;
-        font-size: 25px;
+    .list {
+        &__item {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+        &__desc {
+            padding-left: 0;
+            text-align: justify;
+            margin-bottom: 20px;
+            @include fontDecoration(15px, 27px);
+        }
     }
 }

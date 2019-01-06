@@ -1,17 +1,15 @@
 .youtube {
     background-color: $primary-color;
     &__wrapper {
-        max-width: 1170px;
-        margin: 0 auto;
+        @extend %container;
         padding: 85px 0 85px;
     }
     &__header {
         font-family: $primary-font;
         color: #fff;
-        font-size: 60px;
         margin-top: 0;
         margin-bottom: 45px;
-        line-height: 72px;
+        @include fontDecoration(60px, 72px);
     }
     &__container {
         max-width: 770px;
@@ -50,29 +48,31 @@
 }
 
 @media (max-width: 767.98px) {
-    .youtube__wrapper {
-        padding-top: 45px;
-        padding-bottom: 45px;
-    }
-    .youtube__header {
-        font-size: 45px;
-        line-height: 45px;
-    }
-    .youtube__btn {
-        width: 120px;
+    .youtube {
+        &__wrapper {
+            padding-top: 45px;
+            padding-bottom: 45px;
+        }
+        &__header {
+            @include fontDecoration(45px, 45px);
+        }
+        &__btn {
+            width: 120px;
+        }
     }
 }
 
 @media (max-width: 575.98px) {
-    .youtube__wrapper {
-        padding: 30px 20px 20px;
-    }
-    .youtube__header {
-        font-size: 33px;
-        line-height: 35px;
-        margin-bottom: 35px;
-    }
-    .youtube__btn {
-        width: 90px;
+    .youtube {
+        &__wrapper {
+            padding: 30px 20px 20px;
+        }
+        &__header {
+            @include fontDecoration(33px, 35px);
+            margin-bottom: 35px;
+        }
+        &__btn {
+            width: 80px;
+        }
     }
 }

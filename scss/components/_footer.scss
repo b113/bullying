@@ -1,8 +1,7 @@
 .footer {
     background-color: $primary-color;
     &__wrapper {
-        max-width: 1170px;
-        margin: 0 auto;
+        @extend %container;
         padding: 40px 0 45px;
         display: flex;
         justify-content: space-between;
@@ -19,6 +18,7 @@
         align-items: center;
         &--active {
             text-decoration: none;
+            cursor: initial;
         }
     }
 }

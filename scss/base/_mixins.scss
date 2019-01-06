@@ -1,0 +1,19 @@
+@import "../base/variables";
+
+@mixin fontDecoration($size, $lineHeight) {
+  font-size: $size;
+  line-height: $lineHeight;
+}
+
+%container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+%quoteText {
+    color: #fff;
+    font-family: $primary-font;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+}
