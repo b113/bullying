@@ -47,19 +47,19 @@
 @media (max-width: 575.98px) {
     .quote {
         &__text {
-            @include fontDecoration(20px, 35px);
-            padding-left: 85px;
+            @include fontDecoration(15px, 30px);
+            padding-left: 65px;
         }
         &__wrapper {
             padding-left: 10px;
             padding-right: 25px;
         }
         &__author {
-            font-size: 18px;
+            font-size: 15px;
         }
         &__hook {
-            font-size: 150px;
-            top: -60px;
+            font-size: 100px;
+            top: -40px;
             left: 0;
         }
     }

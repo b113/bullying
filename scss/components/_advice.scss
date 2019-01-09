@@ -27,7 +27,7 @@
             padding: 15px 25px;
         }
         &__text {
-            @include fontDecoration(20px, 35px);
+            @include fontDecoration(15px, 30px);
         }
     }
 }

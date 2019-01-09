@@ -11,7 +11,7 @@
 
 .header {
   background-color: #06799f;
-  height: 100vh; }
+  min-height: 100vh; }
   .header__wrapper {
     position: relative;
     padding-top: 55px; }
@@ -42,8 +42,11 @@
     text-decoration: none;
     color: #fff;
     border-bottom: 2px solid #fff; }
+    .nav__link:hover {
+      border-bottom: 0; }
 
 .slicknav_menu {
+  font-size: 35px;
   display: none;
   background-color: #06799f;
   font-family: "Roboto Slab", serif;
@@ -52,8 +55,14 @@
 .slicknav_btn {
   background-color: #06799f; }
 
+.slicknav_nav a {
+  font-size: 20px; }
+
 .slicknav_nav a:hover {
   border-radius: 0; }
+
+.slicknav_menu .slicknav_menutxt {
+  display: none; }
 
 @media (max-width: 1175px) {
   .header__wrapper {
@@ -254,17 +263,17 @@
 
 @media (max-width: 575.98px) {
   .quote__text {
-    font-size: 20px;
-    line-height: 35px;
-    padding-left: 85px; }
+    font-size: 15px;
+    line-height: 30px;
+    padding-left: 65px; }
   .quote__wrapper {
     padding-left: 10px;
     padding-right: 25px; }
   .quote__author {
-    font-size: 18px; }
+    font-size: 15px; }
   .quote__hook {
-    font-size: 150px;
-    top: -60px;
+    font-size: 100px;
+    top: -40px;
     left: 0; } }
 
 .section-two__wrapper {
@@ -382,8 +391,8 @@
   .advice__wrapper {
     padding: 15px 25px; }
   .advice__text {
-    font-size: 20px;
-    line-height: 35px; } }
+    font-size: 15px;
+    line-height: 30px; } }
 
 .section-three__wrapper {
   padding: 85px 0 35px; }
@@ -695,6 +704,8 @@
   .language-select__item--active {
     text-decoration: none;
     cursor: initial; }
+  .language-select__item:hover {
+    text-decoration: none; }
 
 .fab {
   font-size: 30px; }
